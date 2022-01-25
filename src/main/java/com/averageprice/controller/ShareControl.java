@@ -1,20 +1,24 @@
 package com.averageprice.controller;
 
-import java.text.NumberFormat;
-import java.util.Locale;
+import java.util.ArrayList;
 
 public class ShareControl {
 	
-	
-	public Double multiplyQuantityByPrice(Integer quantityPurchased, Double sharePrice, Double fee){
-		Double totalSpent = quantityPurchased.doubleValue() * sharePrice;		
-		
-		if(fee > 0) {
-			totalSpent = totalSpent + fee;			
+	public void multiplyQuantityByPrice(ArrayList<Integer> quantityPurchased, ArrayList<Double> sharePrice, Integer totalOp){
+		Double totalSpent = 0.0;
+		Integer totalPurchased = 0;
+		for(int i = 0; i < totalOp; i++) {
+			totalSpent = quantityPurchased.get(i) * sharePrice.get(i);
+			totalPurchased += quantityPurchased.get(i);
+			System.out.println("Custo da operação " + i + " " + totalSpent + "/ Ações na operação: " + quantityPurchased.get(i) + " / total ações:  " + totalPurchased);			
 		}
 		
+		
 		//NumberFormat.getCurrencyInstance(new Locale("pt", "BR")).format(totalSpent);
-		return totalSpent;
 	}
 	
+	/*
+	public void averagePrice(Integer quantity) {}
+	*/
+	public void divideTotalSpendByTotalAmount(Float totalSpent, Integer totalSharesPurchased) {}
 }

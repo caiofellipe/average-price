@@ -10,7 +10,7 @@ public class Share {
 		
 	}
 	
-	public Share(Double fee, Double sharePrice, int totalAmount, int quantityPurchased) {
+	public Share(Double fee, Double sharePrice, Integer totalAmount, Integer quantityPurchased) {
 		super();
 		this.fee = fee;
 		this.sharePrice = sharePrice;
