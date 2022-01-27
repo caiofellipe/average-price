@@ -26,26 +26,21 @@ public class App{
 		Integer op = scan.nextInt();
 		
 		if(op > 1) {
-			for(int i = 1; i <= op; i++) {		
-				System.out.println("\n====================================\n");
+			for(int i = 1; i <= op; i++) {
+				System.out.println("\nOperação "+i);
+				System.out.println("================\n");
 				System.out.println("Preço da ação: ");
 				share.setSharePrice(scan.nextDouble());
 				sharePrice.add(share.getSharePrice());
 				
-				System.out.println("\n====================================\n");
-				
+				System.out.println("================\n");
 				System.out.println("Quantidade de ações: ");
 				share.setQuantityPurchased(scan.nextInt());
 				quantityPurchased.add(share.getQuantityPurchased());
-				
-				
-				
 			}
 			shareControl.multiplyQuantityByPrice(quantityPurchased, sharePrice, op);
 		}else {
 			System.out.println("Não é possivel ter um valor médio com apenas 1 operação.");
 		}
-		
-		//System.out.println(shareControl.multiplyQuantityByPrice(200, 14.0, 20.0));
     }
 }
