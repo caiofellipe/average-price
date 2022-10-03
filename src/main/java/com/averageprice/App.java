@@ -6,19 +6,19 @@ import java.util.Scanner;
 
 import javax.xml.parsers.ParserConfigurationException;
 
-import org.xml.sax.SAXException;
-
 import com.averageprice.controller.ShareControl;
 import com.averageprice.model.Share;
 
 public class App{
 
-	public static void main( String[] args ) throws ParserConfigurationException, SAXException, IOException{    	
+	private static Scanner scan;
+
+	public static void main( String[] args ) throws ParserConfigurationException, IOException{    	
 		Share share = new Share();
     	ArrayList<Double> sharePrice = new ArrayList<>();
     	ArrayList<Integer> quantityPurchased = new ArrayList<>();
     	
-		Scanner scan = new Scanner(System.in);
+		scan = new Scanner(System.in);
 		
 		ShareControl shareControl = new ShareControl();
     	    	
